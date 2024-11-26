@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "functions": {
+        "api/webhook.py": {
+            "memory": 1024,
+            "maxDuration": 10
+        }
+    },
+    "routes": [
+        {
+            "src": "/api/webhook",
+            "methods": ["POST", "OPTIONS"],
+            "dest": "/api/webhook.py",
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "POST, OPTIONS",
+                "Access-Control-Allow-Headers": "X-Hub-Signature-256, Content-Type"
+            }
+        }
+    ]
+} 
